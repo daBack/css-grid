@@ -1,38 +1,55 @@
-.App {
+body {
+  background-color: #050610;
+  color: #fefefe;
+}
+
+.grid {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: auto auto;
+  grid-template-rows: 80px auto auto auto;
+  grid-template-areas: 
+    "logo nav"
+    "quoteImg image"
+    "text ."
+    "rawr .";
+}
+
+.logo {
+  grid-area: logo;
+}
+
+.image {
+  grid-area: image;
+  max-width: 300px; /* Keep */
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  grid-area: nav;
+}
+
+.nav p {
+  padding: 0 20px;
+}
+
+.text {
+  grid-area: text;
+  align-self: center;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.quoteImg {
+  width: 100%; /* Keep */
+  max-width: 500px; /* Keep */
+  align-self: center;
+  justify-self: center;
+  grid-area: quoteImg;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.rawr {
+  grid-area: rawr;
+  justify-self: end;
+  font-size: 40px;
 }
