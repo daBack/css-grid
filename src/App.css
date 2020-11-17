@@ -4,30 +4,19 @@ body {
 }
 
 .grid {
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: auto auto;
-  grid-template-rows: 80px auto auto auto;
-  grid-template-areas: 
-    "logo nav"
-    "quoteImg image"
-    "text ."
-    "rawr .";
+
 }
 
 .logo {
-  grid-area: logo;
+
 }
 
 .image {
-  grid-area: image;
-  max-width: 300px; /* Keep */
+  max-width: 300px;
 }
 
 .nav {
-  display: flex;
-  justify-content: flex-end;
-  grid-area: nav;
+
 }
 
 .nav p {
@@ -35,21 +24,14 @@ body {
 }
 
 .text {
-  grid-area: text;
-  align-self: center;
-  text-align: center;
+
 }
 
 .quoteImg {
-  width: 100%; /* Keep */
-  max-width: 500px; /* Keep */
-  align-self: center;
-  justify-self: center;
-  grid-area: quoteImg;
+  width: 100%;
+  max-width: 500px;
 }
 
 .rawr {
-  grid-area: rawr;
-  justify-self: end;
   font-size: 40px;
 }
